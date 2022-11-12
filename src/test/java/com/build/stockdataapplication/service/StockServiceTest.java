@@ -36,7 +36,7 @@ class StockServiceTest {
         final BigDecimal dividendORC = stockService.findDividend(stockORC);
         System.out.println("Dividend: " + dividendORC);
 
-        double dividendxORC = 0.16;
+        //double dividendxORC = 0.16;
         //-----------------AGNC-----------------
         final StockWrapper stockAGNC = stockService.findStock("AGNC");
 
