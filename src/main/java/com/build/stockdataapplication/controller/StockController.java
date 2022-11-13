@@ -27,9 +27,6 @@ public class StockController {
         final BigDecimal changeORC = stockService.findLastChangePercent(stockORC);
         System.out.println("Change: " + changeORC);
 
-        final BigDecimal mean2000DayPercentORC = stockService.findChangeFrom200MeanPercent(stockORC);
-        System.out.println("Mean 2000 Day Percent: " + mean2000DayPercentORC);
-
 
 
         //-----------------AGNC-----------------
@@ -42,8 +39,6 @@ public class StockController {
         final BigDecimal changeAGNC = stockService.findLastChangePercent(stockAGNC);
         System.out.println("Change: " + changeAGNC);
 
-        final BigDecimal mean2000DayPercentAGNC = stockService.findChangeFrom200MeanPercent(stockAGNC);
-        System.out.println("Mean 2000 Day Percent: " + mean2000DayPercentAGNC);
     }
 
 

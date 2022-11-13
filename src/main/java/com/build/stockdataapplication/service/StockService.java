@@ -1,13 +1,11 @@
 package com.build.stockdataapplication.service;
 
 
-import com.build.stockdataapplication.StockDataApplication;
 import com.build.stockdataapplication.model.StockWrapper;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import yahoofinance.YahooFinance;
 
-import javax.imageio.IIOException;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.List;
@@ -39,12 +37,10 @@ public class StockService {
         return stock.getStock().getQuote(refreshService.shouldRefresh(stock)).getChangeInPercent();
     }
 
-    public BigDecimal findChangeFrom200MeanPercent(final StockWrapper stock) throws IOException{
-        return stock.getStock().getQuote(refreshService.shouldRefresh(stock)).getChangeFromAvg200InPercent();
-    }
 
-    public BigDecimal findDividend(final StockWrapper stock) throws IOException{
-        return stock.getStock().getDividend().getAnnualYield();
+
+    public BigDecimal findAnnualYieldDividend(final StockWrapper stock) throws IOException{
+        return stock.getStock().getDividend().getAnnualYieldPercent();
     }
 
 

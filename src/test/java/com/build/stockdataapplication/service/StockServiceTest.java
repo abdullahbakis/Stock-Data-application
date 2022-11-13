@@ -7,10 +7,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class StockServiceTest {
 
@@ -30,14 +30,14 @@ class StockServiceTest {
         final BigDecimal changeORC = stockService.findLastChangePercent(stockORC);
         System.out.println("Change: " + changeORC);
 
-        final BigDecimal mean2000DayPercentORC = stockService.findChangeFrom200MeanPercent(stockORC);
-        System.out.println("Mean 2000 Day Percent: " + mean2000DayPercentORC);
 
-        final BigDecimal dividendORC = stockService.findDividend(stockORC);
-        System.out.println("Dividend: " + dividendORC);
+        final BigDecimal annualYieldORC = stockService.findAnnualYieldDividend(stockORC);
+        System.out.println("Trailing annual dividend yield: " + annualYieldORC);
 
-        double dividendxORC = 0.16;
-        //double divEfficiencyORC = dividendxORC/priceORC;
+        final BigDecimal dividendxORC = BigDecimal.valueOf(1.92);
+        final BigDecimal divEfficiencyORC = dividendxORC.divide(priceORC, 4, RoundingMode.CEILING).multiply(BigDecimal.valueOf(100));
+
+        System.out.println("efficiemcy: " + divEfficiencyORC);
         //-----------------AGNC-----------------
         final StockWrapper stockAGNC = stockService.findStock("AGNC");
 
@@ -48,8 +48,6 @@ class StockServiceTest {
         final BigDecimal changeAGNC = stockService.findLastChangePercent(stockAGNC);
         System.out.println("Change: " + changeAGNC);
 
-        final BigDecimal mean2000DayPercentAGNC = stockService.findChangeFrom200MeanPercent(stockAGNC);
-        System.out.println("Mean 2000 Day Percent: " + mean2000DayPercentAGNC);
     }
 
 
