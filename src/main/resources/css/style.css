@@ -1,0 +1,69 @@
+.container, .tableArea .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+::-webkit-scrollbar {
+  width: 0; }
+
+::-webkit-scrollbar-track {
+  background: transparent; }
+
+::-webkit-scrollbar-thumb {
+  background: #115173; }
+
+html,
+body,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+  padding: 0;
+  margin: 0; }
+
+a {
+  display: inline-block;
+  text-decoration: none; }
+
+.container {
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#022c43 0%, black 100%);
+  color: white;
+  font-size: 1.5rem; }
+
+.tableArea {
+  width: 75%;
+  max-height: 75%;
+  overflow: auto;
+  padding: 1rem;
+  border: 1px solid #115173;
+  border-radius: 1rem; }
+  .tableArea table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center; }
+    .tableArea table th,
+    .tableArea table td {
+      height: 3rem;
+      border-style: none solid solid none;
+      border-color: #115173;
+      border-width: 1px;
+      padding: 0.5rem; }
+    .tableArea table th:last-child,
+    .tableArea table td:last-child {
+      border-right: none; }
+    .tableArea table tr {
+      z-index: 0; }
+      .tableArea table tr:last-child td {
+        border-bottom: none; }
+  .tableArea .logo img {
+    max-width: 4rem;
+    max-height: 3rem; }

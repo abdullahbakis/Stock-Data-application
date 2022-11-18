@@ -1,0 +1,61 @@
+@import "reboot";
+
+// Container
+.container {
+  @extend %flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: $bgcolor;
+  color: white;
+  font-size: 1.5rem;
+}
+
+// Table
+.tableArea {
+  width: 75%;
+  max-height: 75%;
+  overflow: auto;
+  padding: 1rem;
+  border: 1px solid $blue2;
+  border-radius: 1rem;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+
+    th,
+    td {
+      height: 3rem;
+      border-style: none solid solid none;
+      border-color: $blue2;
+      border-width: 1px;
+      padding: 0.5rem;
+    }
+
+    th:last-child,
+    td:last-child {
+      border-right: none;
+    }
+
+    tr {
+      z-index: 0;
+
+      &:last-child {
+        td {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .logo {
+    @extend %flex;
+
+    img {
+      max-width: 4rem;
+      max-height: 3rem;
+    }
+  }
+}
