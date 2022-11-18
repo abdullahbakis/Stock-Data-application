@@ -1,4 +1,5 @@
-.container, .tableArea .logo {
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+.container, .header, .lang, .lang a, .dolar {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -28,6 +29,7 @@ label {
   margin: 0; }
 
 a {
+  color: white;
   display: inline-block;
   text-decoration: none; }
 
@@ -36,34 +38,79 @@ a {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(#022c43 0%, black 100%);
-  color: white;
-  font-size: 1.5rem; }
+  color: white; }
 
-.tableArea {
+.header {
+  gap: 2rem;
+  position: fixed;
+  top: 1rem;
+  right: 1rem; }
+
+.lang {
+  gap: 0.5rem; }
+  .lang a {
+    font-size: 0.75rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 1px solid #115173;
+    border-radius: 50%;
+    transition: 0.5s all; }
+    .lang a:hover {
+      border-color: #ffd700; }
+
+.dolar {
+  gap: 0.5rem;
+  width: 5rem;
+  height: 2rem;
+  border: 1px solid #115173;
+  border-radius: 0.5rem; }
+
+.table {
   width: 75%;
   max-height: 75%;
   overflow: auto;
   padding: 1rem;
   border: 1px solid #115173;
-  border-radius: 1rem; }
-  .tableArea table {
+  border-radius: 1rem;
+  font-size: 1.5rem; }
+  .table table {
     width: 100%;
     border-collapse: collapse;
     text-align: center; }
-    .tableArea table th,
-    .tableArea table td {
+    .table table th,
+    .table table td {
       height: 3rem;
       border-style: none solid solid none;
       border-color: #115173;
       border-width: 1px;
       padding: 0.5rem; }
-    .tableArea table th:last-child,
-    .tableArea table td:last-child {
+    .table table th:last-child,
+    .table table td:last-child {
       border-right: none; }
-    .tableArea table tr {
+    .table table tr {
       z-index: 0; }
-      .tableArea table tr:last-child td {
+      .table table tr:last-child td {
         border-bottom: none; }
-  .tableArea .logo img {
-    max-width: 4rem;
-    max-height: 3rem; }
+
+.github {
+  display: flex;
+  gap: 1rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem; }
+  .github * {
+    transition: 0.75s all; }
+  .github a {
+    color: white;
+    font-size: 1.5rem; }
+    .github a:hover {
+      color: #ffd700; }
+      .github a:hover + p {
+        opacity: 1; }
+  .github p {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 6rem;
+    font-size: 1rem;
+    color: #ffd700;
+    opacity: 0; }
