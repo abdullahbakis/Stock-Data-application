@@ -1,5 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
-.container, .header, .lang, .lang a, .dolar {
+.container, header,
+footer, header a,
+header p {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -33,37 +35,60 @@ a {
   display: inline-block;
   text-decoration: none; }
 
+* {
+  color: white;
+  box-sizing: border-box;
+  transition: 0.5s all; }
+
 .container {
   flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(#022c43 0%, black 100%);
-  color: white; }
+  background: linear-gradient(#022c43 0%, black 100%); }
 
-.header {
-  gap: 2rem;
-  position: fixed;
-  top: 1rem;
-  right: 1rem; }
+header,
+footer {
+  width: 100%;
+  justify-content: end;
+  gap: 1rem; }
 
-.lang {
-  gap: 0.5rem; }
-  .lang a {
-    font-size: 0.75rem;
-    width: 1.75rem;
-    height: 1.75rem;
-    border: 1px solid #115173;
-    border-radius: 50%;
-    transition: 0.5s all; }
-    .lang a:hover {
-      border-color: #ffd700; }
+header a,
+header p {
+  height: 1.75rem;
+  border: 1px solid #115173; }
 
-.dolar {
-  gap: 0.5rem;
+header a {
+  width: 1.75rem;
+  border-radius: 50%;
+  font-size: 0.75rem; }
+  header a:hover {
+    border-color: #ffd700; }
+
+header p {
   width: 5rem;
-  height: 2rem;
-  border: 1px solid #115173;
   border-radius: 0.5rem; }
+  header p::after {
+    content: "18,66";
+    margin-left: 0.5rem; }
+
+footer {
+  display: flex;
+  gap: 1rem; }
+  footer a {
+    font-size: 1.5rem; }
+    footer a:hover {
+      color: #ffd700; }
+      footer a:hover + p {
+        opacity: 1; }
+  footer p {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 6rem;
+    font-size: 1rem;
+    color: #ffd700;
+    opacity: 0; }
 
 .table {
   width: 75%;
@@ -91,26 +116,3 @@ a {
       z-index: 0; }
       .table table tr:last-child td {
         border-bottom: none; }
-
-.github {
-  display: flex;
-  gap: 1rem;
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem; }
-  .github * {
-    transition: 0.75s all; }
-  .github a {
-    color: white;
-    font-size: 1.5rem; }
-    .github a:hover {
-      color: #ffd700; }
-      .github a:hover + p {
-        opacity: 1; }
-  .github p {
-    position: fixed;
-    bottom: 1.25rem;
-    right: 6rem;
-    font-size: 1rem;
-    color: #ffd700;
-    opacity: 0; }
