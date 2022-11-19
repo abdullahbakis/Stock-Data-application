@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700);
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
 .container, header,
 footer, header a,
@@ -38,7 +39,8 @@ a {
 * {
   color: white;
   box-sizing: border-box;
-  transition: 0.5s all; }
+  transition: 0.5s all;
+  font-family: 'Quicksand', sans-serif; }
 
 .container {
   flex-direction: column;
@@ -50,9 +52,9 @@ a {
 
 header,
 footer {
-  width: 100%;
   justify-content: end;
-  gap: 1rem; }
+  gap: 1rem;
+  width: 100%; }
 
 header a,
 header p {
@@ -86,18 +88,18 @@ footer {
     position: fixed;
     bottom: 1.25rem;
     right: 6rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #ffd700;
     opacity: 0; }
 
 .table {
-  width: 75%;
+  max-width: 75%;
   max-height: 75%;
   overflow: auto;
   padding: 1rem;
   border: 1px solid #115173;
   border-radius: 1rem;
-  font-size: 1.5rem; }
+  font-size: 1.25rem; }
   .table table {
     width: 100%;
     border-collapse: collapse;
