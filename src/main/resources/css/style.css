@@ -1,4 +1,8 @@
-.container, .tableArea .logo {
+@import url(https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700);
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+.container, header,
+footer, header a,
+header p {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -28,42 +32,89 @@ label {
   margin: 0; }
 
 a {
+  color: white;
   display: inline-block;
   text-decoration: none; }
 
+* {
+  color: white;
+  box-sizing: border-box;
+  transition: 0.5s all;
+  font-family: 'Quicksand', sans-serif; }
+
 .container {
   flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(#022c43 0%, black 100%);
-  color: white;
-  font-size: 1.5rem; }
+  background: linear-gradient(#022c43 0%, black 100%); }
 
-.tableArea {
-  width: 75%;
+header,
+footer {
+  justify-content: end;
+  gap: 1rem;
+  width: 100%; }
+
+header a,
+header p {
+  height: 1.75rem;
+  border: 1px solid #115173; }
+
+header a {
+  width: 1.75rem;
+  border-radius: 50%;
+  font-size: 0.75rem; }
+  header a:hover {
+    border-color: #ffd700; }
+
+header p {
+  width: 5rem;
+  border-radius: 0.5rem; }
+  header p::after {
+    content: "18,66";
+    margin-left: 0.5rem; }
+
+footer {
+  display: flex;
+  gap: 1rem; }
+  footer a {
+    font-size: 1.5rem; }
+    footer a:hover {
+      color: #ffd700; }
+      footer a:hover + p {
+        opacity: 1; }
+  footer p {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 6rem;
+    font-size: 0.8rem;
+    color: #ffd700;
+    opacity: 0; }
+
+.table {
+  max-width: 75%;
   max-height: 75%;
   overflow: auto;
   padding: 1rem;
   border: 1px solid #115173;
-  border-radius: 1rem; }
-  .tableArea table {
+  border-radius: 1rem;
+  font-size: 1.25rem; }
+  .table table {
     width: 100%;
     border-collapse: collapse;
     text-align: center; }
-    .tableArea table th,
-    .tableArea table td {
+    .table table th,
+    .table table td {
       height: 3rem;
       border-style: none solid solid none;
       border-color: #115173;
       border-width: 1px;
       padding: 0.5rem; }
-    .tableArea table th:last-child,
-    .tableArea table td:last-child {
+    .table table th:last-child,
+    .table table td:last-child {
       border-right: none; }
-    .tableArea table tr {
+    .table table tr {
       z-index: 0; }
-      .tableArea table tr:last-child td {
+      .table table tr:last-child td {
         border-bottom: none; }
-  .tableArea .logo img {
-    max-width: 4rem;
-    max-height: 3rem; }

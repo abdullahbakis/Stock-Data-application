@@ -10,7 +10,9 @@ $navy: #022c43;
 $blue1: #053f5e;
 $blue2: #115173;
 $yellow: #ffd700;
+
 $bgcolor: linear-gradient($navy 0%, black 100%);
+$border: 1px solid $blue2;
 
 // Scrollbar
 ::-webkit-scrollbar {
@@ -43,6 +45,7 @@ label {
 }
 
 a {
+  color: white;
   display: inline-block;
   text-decoration: none;
 }
