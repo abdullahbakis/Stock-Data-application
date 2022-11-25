@@ -40,7 +40,7 @@ public class StockService {
 
 
     public BigDecimal findAnnualYieldDividend(final StockWrapper stock) throws IOException{
-        return stock.getStock().getDividend().getAnnualYieldPercent();
+        return stock.getStock().getDividend().getAnnualYield();
     }
 
 
