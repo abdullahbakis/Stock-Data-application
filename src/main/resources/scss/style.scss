@@ -1,0 +1,158 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700);
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+@import "reboot";
+@import "colors";
+@import "themes";
+
+* {
+  box-sizing: border-box;
+  transition: 0.5s all;
+  font-family: 'Quicksand', sans-serif;
+
+  @include themify($themes) {
+    color: themed('text');
+  }
+}
+
+// Container
+.container {
+  @extend %flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100vw;
+  height: 100vh;
+
+  @include themify($themes) {
+    background: themed('bg');
+  }
+}
+
+// Header & Footer
+header,
+footer {
+  @extend %flex;
+  justify-content: end;
+  gap: 1rem;
+  width: 100%;
+}
+
+// Header
+header {
+
+  button,
+  p {
+    @extend %flex;
+    height: 1.75rem;
+    background: transparent;
+
+    @include themify($themes) {
+      border: 1px solid themed('border');
+    }
+  }
+ 
+  button {
+    width: 1.75rem;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    cursor: pointer;
+
+    &:hover {
+
+      @include themify($themes) {
+        border-color: themed('hover');
+      }
+    }
+  }
+
+  p {
+    width: 5rem;
+    border-radius: 0.5rem;
+
+    &::after {
+      content: "18,66";
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+// Footer
+footer {
+  display: flex;
+  gap: 1rem;
+
+  a {
+    font-size: 1.5rem;
+
+    &:hover {
+
+      @include themify($themes) {
+        color: themed('hover');
+      }
+
+      +p {
+        opacity: 1;
+      }
+    }
+  }
+
+  p {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 6rem;
+    font-size: 0.8rem;
+    color: $yellow;
+    opacity: 0;
+
+    @include themify($themes) {
+      color: themed('hover');
+    }
+  }
+}
+
+// Table
+.table {
+  max-width: 75%;
+  max-height: 75%;
+  overflow: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+
+  @include themify($themes) {
+    border: 1px solid themed('border');
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+
+    th,
+    td {
+      height: 3rem;
+      border-style: none solid solid none;
+      border-width: 1px;
+      padding: 0.5rem;
+
+      @include themify($themes) {
+        border-color: themed('border');
+      }
+    }
+
+    th:last-child,
+    td:last-child {
+      border-right: none;
+    }
+
+    tr {
+      z-index: 0;
+
+      &:last-child {
+        td {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+} 

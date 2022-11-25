@@ -1,0 +1,36 @@
+@import "themes";
+@import "colors";
+
+// Variable
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Reboot
+html,body,ul,ol,h1,h2,h3,h4,h5,h6,p,label {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 0;
+
+  &-track {
+    background: transparent;
+  }
+
+  &-thumb {
+
+    @include themify($themes) {
+      background: themed('scroll');
+    }
+  }
+}

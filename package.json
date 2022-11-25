@@ -1,0 +1,23 @@
+{
+  "name": "dividend-stocks",
+  "version": "1.0.0",
+  "description": "- [Live Demo](https://falovic.github.io/dividend-stocks)",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass -w src/main/resources/scss -o src/main/resources/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/falovic/dividend-stocks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/falovic/dividend-stocks/issues"
+  },
+  "homepage": "https://github.com/falovic/dividend-stocks#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
