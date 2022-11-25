@@ -30,6 +30,7 @@ public class StockController {
         final BigDecimal priceDollarTl = stockService.findPrice(dollarTl);
         System.out.println("----------$/TL----------");
         System.out.println("Price: " + priceDollarTl);
+        }
      */
 
     private List<StockWrapper> listStocks;
