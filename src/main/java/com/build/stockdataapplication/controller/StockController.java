@@ -52,6 +52,7 @@ public class StockController {
 
             }
 
+
             System.out.println(stockNamesX.get(stock));
             System.out.println(stockPricesX.get(stock));
             System.out.println(stockYieldsX.get(stock));
