@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/falovic/dividend-stocks#readme",
   "dependencies": {
-    "node-sass": "^8.0.0"
+    "node-sass": "^8.0.0",
+    "y18n": "^5.0.8"
   }
 }
