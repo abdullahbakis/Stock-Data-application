@@ -33,12 +33,6 @@ public class StockService {
         return stock.getStock().getQuote(refreshService.shouldRefresh(stock)).getPrice();
     }
 
-    public BigDecimal findLastChangePercent(final StockWrapper stock) throws IOException{
-        return stock.getStock().getQuote(refreshService.shouldRefresh(stock)).getChangeInPercent();
-    }
-
-
-
     public BigDecimal findAnnualYieldDividend(final StockWrapper stock) throws IOException{
         return stock.getStock().getDividend().getAnnualYield();
     }

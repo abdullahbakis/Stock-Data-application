@@ -15,19 +15,24 @@ import java.util.ArrayList;
 public class StockWrapper {
     private Stock stock;
     private LocalDateTime lastAccessed;
-    private ArrayList<String> stockName;
-    private ArrayList<BigDecimal> stockPrice;
-    private ArrayList<BigDecimal> stockAnnualYield;
+    private String stockName;
+    private BigDecimal stockPrice;
+    private BigDecimal stockGrossDividend;
+    private BigDecimal stockDividendYield;
+    private BigDecimal stockEfficiency;
+    private BigDecimal monthlyIncome;
 
 
     public StockWrapper() {
     }
 
-
-    public StockWrapper(ArrayList<String> stockName, ArrayList<BigDecimal> stockPrice, ArrayList<BigDecimal> stockAnnualYield) {
+    public StockWrapper(String stockName, BigDecimal stockPrice, BigDecimal stockGrossDividend, BigDecimal stockDividendYield, BigDecimal stockEfficiency, BigDecimal monthlyIncome) {
         this.stockName = stockName;
         this.stockPrice = stockPrice;
-        this.stockAnnualYield = stockAnnualYield;
+        this.stockGrossDividend = stockGrossDividend;
+        this.stockDividendYield = stockDividendYield;
+        this.stockEfficiency = stockEfficiency;
+        this.monthlyIncome = monthlyIncome;
     }
 
     public StockWrapper(Stock stock) {
@@ -44,28 +49,51 @@ public class StockWrapper {
         return lastAccessed;
     }
 
-    public ArrayList<String> getStockName() {
+    public String getStockName() {
         return stockName;
     }
 
-    public void setStockName(ArrayList<String> stockName) {
+    public void setStockName(String stockName) {
         this.stockName = stockName;
     }
 
-    public ArrayList<BigDecimal> getStockPrice() {
+    public BigDecimal getStockPrice() {
         return stockPrice;
     }
 
-    public void setStockPrice(ArrayList<BigDecimal> stockPrice) {
+    public void setStockPrice(BigDecimal stockPrice) {
         this.stockPrice = stockPrice;
     }
 
-    public ArrayList<BigDecimal> getStockAnnualYield() {
-        return stockAnnualYield;
+    public BigDecimal getStockGrossDividend() {
+        return stockGrossDividend;
     }
 
-    public void setStockAnnualYield(ArrayList<BigDecimal> stockAnnualYield) {
-        this.stockAnnualYield = stockAnnualYield;
+    public void setStockGrossDividend(BigDecimal stockGrossDividend) {
+        this.stockGrossDividend = stockGrossDividend;
     }
 
+    public BigDecimal getStockDividendYield() {
+        return stockDividendYield;
+    }
+
+    public void setStockDividendYield(BigDecimal stockDividendYield) {
+        this.stockDividendYield = stockDividendYield;
+    }
+
+    public BigDecimal getStockEfficiency() {
+        return stockEfficiency;
+    }
+
+    public void setStockEfficiency(BigDecimal stockEfficiency) {
+        this.stockEfficiency = stockEfficiency;
+    }
+
+    public BigDecimal getMonthlyIncome() {
+        return monthlyIncome;
+    }
+
+    public void setMonthlyIncome(BigDecimal monthlyIncome) {
+        this.monthlyIncome = monthlyIncome;
+    }
 }
