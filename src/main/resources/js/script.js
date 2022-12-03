@@ -6,3 +6,10 @@ function changeTheme() {
     let view = document.getElementById("view");
     view.className = view.className === 'bi bi-sun-fill' ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
 }
+
+// Hidden Button
+function hiddenBtn() {
+    let btn = document.getElementById("get");
+    btn.style.opacity = '0';
+    btn.style.visibility = 'hidden';
+}
