@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700);
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
 @import "reboot";
 @import "colors";
@@ -41,7 +41,7 @@ footer {
 header {
 
   button,
-  p {
+  .exc {
     @extend %flex;
     height: 1.75rem;
     background: transparent;
@@ -50,7 +50,7 @@ header {
       border: 1px solid themed('border');
     }
   }
- 
+
   button {
     width: 1.75rem;
     border-radius: 50%;
@@ -58,21 +58,16 @@ header {
     cursor: pointer;
 
     &:hover {
-
       @include themify($themes) {
         border-color: themed('hover');
       }
     }
   }
 
-  p {
-    width: 5rem;
+  .exc {
+    padding: 0 0.5rem;
+    gap: 0.5rem;
     border-radius: 0.5rem;
-
-    &::after {
-      content: "18,66";
-      margin-left: 0.5rem;
-    }
   }
 }
 
@@ -155,4 +150,25 @@ footer {
       }
     }
   }
-} 
+}
+
+// Get Stocks 
+#get {
+  @extend %flex;
+  height: 1.75rem;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  cursor: pointer;
+
+  @include themify($themes) {
+    border: 1px solid themed('border');
+  }
+
+  &:hover {
+
+    @include themify($themes) {
+      border-color: themed('hover');
+    }
+  }
+}
