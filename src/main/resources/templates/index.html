@@ -6,9 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="src/main/resources/js/script.js"></script>
-    <script src="../js/script.js"></script>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script th:src="@{src/main/resources/js/script.js}"></script>
     <title>Dividend Stocks App</title>
 </head>
 
@@ -27,7 +26,7 @@
 
             <!-- Exchange Rate -->
             <div class="exc" th:each="stockStat2 : ${stocks2}">
-                <i class="bi bi-currency-dollar"></i>
+                <p class="bi bi-currency-dollar"></p>
                 <p th:text="${stockStat2.stockPrice}"></p>
             </div>
 
@@ -55,9 +54,6 @@
                     </tr>
             </table>
         </div>
-
-        <!-- Get Stocks -->
-        <button id="get" onclick="hiddenBtn()">Get Stocks</button>
 
         <!-- Github -->
         <footer>
