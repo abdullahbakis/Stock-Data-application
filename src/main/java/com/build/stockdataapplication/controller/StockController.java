@@ -24,6 +24,7 @@ public class StockController {
     private StockService stockService;
 
     private List<StockWrapper> listStocks;
+    private List<StockWrapper> listStocks2;
 
     @PostConstruct
     private void multiple() {
@@ -132,8 +133,9 @@ public class StockController {
 
 
         listStocks = new ArrayList<>();
+        listStocks2 = new ArrayList<>();
+        listStocks2.add(stocks0);
 
-        listStocks.add(stocks0);
         listStocks.add(stocks1);
         listStocks.add(stocks2);
         listStocks.add(stocks3);
@@ -216,6 +218,7 @@ public class StockController {
     public String showStocks(Model model) {
 
         model.addAttribute("stocks", listStocks);
+        model.addAttribute("stocks2", listStocks2);
         return "index";
     }
 
