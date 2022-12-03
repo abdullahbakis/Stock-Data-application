@@ -209,9 +209,7 @@ public class StockController {
         listStocks.add(stocks71);
         listStocks.add(stocks72);
         listStocks.add(stocks73);
-
         //Thread.sleep(16000);
-
     }
 
     @GetMapping("/list")
