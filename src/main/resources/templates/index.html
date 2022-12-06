@@ -6,67 +6,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="src/main/resources/js/script.js"></script>
-    <script src="../js/script.js"></script>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script th:src="@{/js/script.js}"></script>
     <title>Dividend Stocks App</title>
 </head>
 
 <body class="theme-dark">
 
-    <div class="container">
+<div class="container">
 
-        <!-- Bar -->
-        <header>
+    <!-- Bar -->
+    <header>
 
-            <!-- Language -->
-            <button>EN</button>
+        <!-- Language -->
+        <button>EN</button>
 
-            <!-- View -->
-            <button id="view" onclick="changeTheme()" class="bi bi-sun-fill"></button>
+        <!-- View -->
+        <button id="view" onclick="changeTheme()" class="bi bi-sun-fill"></button>
 
-            <!-- Exchange Rate -->
-            <div class="exc">
-                <i class="bi bi-currency-dollar"></i>
-                <p>18,63</p>
-            </div>
-
-        </header>
-
-        <!-- Table -->
-        <div class="table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Stock</th>
-                        <th>Stock Price</th>
-                        <th>Gross Dividend</th>
-                        <th>Dividend Yield</th>
-                        <th>Efficiency</th>
-                        <th>Monthly Income</th>
-                    </tr>
-                    <tr th:each="stockStat : ${stocks}">
-                        <td th:text="${stockStat.stockName}"></td>
-                        <td th:text="${stockStat.stockPrice}"></td>
-                        <td th:text="${stockStat.stockGrossDividend}"></td>
-                        <td th:text="${stockStat.stockDividendYield}"></td>
-                        <td th:text="${stockStat.stockEfficiency}"></td>
-                        <td th:text="${stockStat.monthlyIncome}"></td>
-                    </tr>
-            </table>
+        <!-- Exchange Rate -->
+        <div class="exc" th:each="stockStat2 : ${stocks2}">
+            <i class="bi bi-currency-dollar"></i>
+            <p th:text="${stockStat2.stockPrice}"></p>
         </div>
 
-        <!-- Get Stocks -->
-        <button id="get" onclick="hiddenBtn()">Get Stocks</button>
+    </header>
 
-        <!-- Github -->
-        <footer>
-            <a href="https://github.com/abdullahbakis" target="_blank" class="bi bi-github"></a>
-            <p>abdullahbakis</p>
-            <a href="https://github.com/falovic" target="_blank" class="bi bi-github"></a>
-            <p>falovic</p>
-        </footer>
+    <!-- Table -->
+    <div class="table">
+        <table>
+            <thead>
+            <tr>
+                <th>Stock</th>
+                <th>Stock Price</th>
+                <th>Gross Dividend</th>
+                <th>Dividend Yield</th>
+                <th>Efficiency</th>
+                <th>Monthly Income</th>
+            </tr>
+            <tr th:each="stockStat : ${stocks}">
+                <td th:text="${stockStat.stockName}"></td>
+                <td th:text="${stockStat.stockPrice}"></td>
+                <td th:text="${stockStat.stockGrossDividend}"></td>
+                <td th:text="${stockStat.stockDividendYield}"></td>
+                <td th:text="${stockStat.stockEfficiency}"></td>
+                <td th:text="${stockStat.monthlyIncome}"></td>
+            </tr>
+        </table>
     </div>
+
+    <!-- Github -->
+    <footer>
+        <a href="https://github.com/abdullahbakis" target="_blank" class="bi bi-github"></a>
+        <p>abdullahbakis</p>
+        <a href="https://github.com/falovic" target="_blank" class="bi bi-github"></a>
+        <p>falovic</p>
+    </footer>
+</div>
 
 </body>
 

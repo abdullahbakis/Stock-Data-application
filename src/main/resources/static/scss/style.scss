@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
-@import "reboot";
-@import "colors";
-@import "themes";
+@import "src/main/resources/static/scss/reboot";
+@import "src/main/resources/static/scss/colors";
+@import "src/main/resources/static/scss/themes";
 
 * {
   box-sizing: border-box;
