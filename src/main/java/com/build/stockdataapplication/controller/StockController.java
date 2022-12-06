@@ -133,6 +133,7 @@ public class StockController {
 
         listStocks = new ArrayList<>();
 
+
         listStocks.add(stocks0);
         listStocks.add(stocks1);
         listStocks.add(stocks2);
