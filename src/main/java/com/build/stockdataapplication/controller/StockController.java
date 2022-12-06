@@ -133,7 +133,7 @@ public class StockController {
 
         listStocks = new ArrayList<>();
 
-
+//Gözüküyor mu şimdi mafiş
         listStocks.add(stocks0);
         listStocks.add(stocks1);
         listStocks.add(stocks2);
