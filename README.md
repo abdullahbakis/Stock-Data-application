@@ -9,7 +9,7 @@ Maven
 Java 8+
 ## Setup
 Clone the repository
-  'git clone https://github.com/abdullahbakis/dividend-stocks.git'
+  ('git clone https://github.com/abdullahbakis/dividend-stocks.git')
 Install the dependencies
   'cd dividend-stocks
   mvn install'
