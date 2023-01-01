@@ -23,6 +23,7 @@ Follow the prompts to enter the ticker symbol and price of the stock
 Java
 ## Authors
 Abdullah Bakış - abdullahbakis
+
 falovic - falovic
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
